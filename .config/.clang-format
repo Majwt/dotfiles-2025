@@ -1,0 +1,13 @@
+BasedOnStyle: WebKit
+IndentWidth: 4
+# ArrayInitializerAlignmentStyle: AIAS_Right
+# BracketAlignmentStyle: BAS_Align
+# AlignConsecutiveStyle: Consecutive
+# AlignConsecutiveBitFields: Consecutive
+
+# AlignTrailingComments:
+#   Kind: Always
+#   OverEmptyLines: 2
+#
+# AllowShortCaseLabelsOnASingleLine: false
+BreakBeforeBraces: BS_Allman

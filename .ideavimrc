@@ -1,0 +1,85 @@
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set vim-highlightedyank
+set quickscope
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_accepted_chars = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9','-','_',':','/','\\','.',',',';','<','>','?','!','@','#','$','%','^','&','*','(',')','[',']','{','}','|','+','=','å','ä','ö','Å','Ä','Ö']
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+map j gj
+map k gk
+
+map <leader>dc <Action>(Debug)
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>ds <Action>(Stop)
+map <leader>cr <Action>(RenameElement)
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cf <Action>(ReformatCode)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+"" map <leader><leader> <Action>(RecentFiles)
+map <C-l> <Action>(NextSplitter)
+map <C-h> <Action>(PrevSplitter)
+map <A-l> <Action>(NextEditorTab)
+map <A-h> <Action>(PrevEditorTab)
+
+map <leader>e <Action>(SelectInProjectView)
+map <leader>ss <Action>(FileStructurePopup)
+map <leader>sS <action>(GoToSymbol)
+map <leader>a <Action>(Annotate)
+map <S-Space> <Action>(GotoNextError)
+map gD <Action>(GotoDeclaration)
+map gI <Action>(GotoImplementation)
+map gS <Action>(GotoSuperMethod)
+map <leader>bd <Action>(CloseContent)
+map <leader>bp <Action>(PinActiveEditorTab)
+
+
+
+""" multiple-cursors mappings ---------------
+" Remap multiple-cursors shortcuts to match terryma/vim-multiple-cursors
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+xmap <C-x> <Plug>SkipOccurrence
+xmap <C-p> <Plug>RemoveOccurrence
+
+" Note that the default <A-n> and g<A-n> shortcuts don't work on Mac due to dead keys.
+" <A-n> is used to enter accented text e.g. ñ
+" Feel free to pick your own mappings that are not affected. I like to use <leader>
+nmap <leader><C-n> <Plug>AllWholeOccurrences
+xmap <leader><C-n> <Plug>AllWholeOccurrences
+nmap <leader>g<C-n> <Plug>AllOccurrences
+xmap <leader>g<C-n> <Plug>AllOccurrences
+
+map <Leader><Leader> <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf<action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>ff <action>(com.mituuz.fuzzier.FuzzyGrep)

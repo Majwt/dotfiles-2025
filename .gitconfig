@@ -1,0 +1,17 @@
+[user]
+  name = Theodor Wase
+  email = theodor.wase@icloud.com # ändra till nya mail
+
+[core]
+  compression = 9
+  whitespace = error
+  preloadindex = true
+
+[branch "master"]
+  mergeoptions = --no-edit
+
+[branch "main"]
+  mergeoptions = --no-edit
+
+[init]
+  defaultBranch = main

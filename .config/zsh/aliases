@@ -1,0 +1,75 @@
+#!/usr/bin/env zsh
+export EDITOR="nvim"
+export BAT_THEME="kanagawa"
+
+# Get External IP / Internet Speed
+alias myip="curl https://ipinfo.io/json" # or /ip for plain-text ip
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python3 -"
+
+alias py="python3"
+
+function safe_cd() {
+   z "$@" 2>/dev/null || cd "$@"
+}
+alias scd="cd"
+alias cd="z"
+alias cdi="zi"
+
+
+alias ezac="eza -1 --icons=always -F --git --color=always -L 1 --group-directories-first -l --git -a --color-scale=size -h"
+# Function to use eza with fallback to ls
+function safe_ls() {
+  ezac "$@" 2>/dev/null || {
+    if [[ $? -eq 1 ]]; then
+      ls "$@"
+    else
+      return $?
+    fi
+  }
+}
+alias ls="eza -1 --icons=always -F --git --color=always -L 1 --group-directories-first -l --git -a --color-scale=size -h"
+alias lsg="ezac --git-ignore"
+alias lsa="ezac -a"
+alias cat="bat"
+alias grep="rg"
+alias diff="delta"
+alias neofetch="fastfetch"
+alias makedb="compiledb -n make"
+eval "$(zoxide init zsh)"
+eval "$(thefuck --alias)"
+# alias fuck='if ! declare -f fuck &>/dev/null; then eval -- "$(thefuck -a)"; fi && fuck'
+
+lg()
+{
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+            cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+            rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+# alias lg="lazygit"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="..."
+
+alias fuzzy='fzf --preview="cat {}" | xargs -r nvim'
+alias scd='cd "$(fzf --preview="if [ -d {} ]; then ls -la {}; else bat{}; fi" | xargs -r dirname)"'
+
+# tmux quickstart
+
+alias dev='tmux new-session -A -s dev -c ~/Developer'
+alias skola='tmux new-session -A -s Skola -c ~/Developer/kth'
+alias config='tmux new-session -A -s Config -c ~/.local/share/chezmoi'
+alias advent='tmux new-session -A -s "Advent of code" -c ~/Developer/AdventofCode/'
+
+in_tmux () {
+if [ "$TERM_PROGRAM" = tmux ]; then
+  echo 'In tmux'
+else
+  echo 'Not in tmux'
+fi
+}

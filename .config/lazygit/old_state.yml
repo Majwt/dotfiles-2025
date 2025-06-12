@@ -1,0 +1,14 @@
+recentrepos:
+  - /Users/theodorwase/.config
+  - /Users/theodorwase/Developer/CM1008/Project
+startuppopupversion: 5
+lastversion: 0.41.0
+customcommandshistory:
+  - pull
+hidecommandlog: false
+ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: always
