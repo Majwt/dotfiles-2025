@@ -56,9 +56,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 
 eval "$(starship init zsh)"
-eval "$(leetcode completions)"
-eval "$(chezmoi completion zsh)"
-
 
 
 source $XDG_CONFIG_HOME/zsh/fzf_config

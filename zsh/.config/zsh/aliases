@@ -32,12 +32,10 @@ alias lsg="ezac --git-ignore"
 alias lsa="ezac -a"
 alias cat="bat"
 alias grep="rg"
-alias diff="delta"
+alias diff="diff-so-fancy"
 alias neofetch="fastfetch"
 alias makedb="compiledb -n make"
 eval "$(zoxide init zsh)"
-eval "$(thefuck --alias)"
-# alias fuck='if ! declare -f fuck &>/dev/null; then eval -- "$(thefuck -a)"; fi && fuck'
 
 lg()
 {

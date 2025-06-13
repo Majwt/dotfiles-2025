@@ -1,13 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
-    - /Users/theodorwase/Developer/kth/HI1039-projekt/Remote-DB-Windows-Inventory
-    - /Users/theodorwase/Developer/kth/hi1029-algo/lab/Redovisning_1
-    - /Users/theodorwase/Developer/kth/hi1029-algo/lab/Redovisning_2/uppgift5
-    - /Users/theodorwase/Developer/kth/hi1029-algo/lab/Redovisning_3/uppgift7
-    - /Users/theodorwase/Developer/kth/hi1029-algo/lab/Redovisning_3/uppgift8
-    - /Users/theodorwase/Developer/kth/hi1029-algo/lab/Redovisning_3/uppgift9
+    - /Users/theodorwase/.dotfiles
 startuppopupversion: 5
-lastversion: 0.45.2
+lastversion: 0.52.0
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false
